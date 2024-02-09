@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.darkpurple-bg {
+    background-color: #030637;
+}
+
+.darkpurple-text {
+    color: #030637;
+}
+
+.purple-bg {
+    background-color: #3C0753;
+}
+
+.purple-text {
+    color: #3C0753;
+}
+
+.darkpink-bg {
+    background-color: #720455;
+}
+
+.darkpink-text {
+    color: #720455;
+}
+
+.pink-bg {
+    background-color: #910A67;
+}
+
+.pink-text {
+    color: #910A67;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+}

@@ -1,20 +1,19 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { navLinks } from '../../constants/'; // Importing navLinks from the data file
 
 const Navbar = () => {
   return (
-    <div>
-      <ul className='flex bg-black'>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/loader">Loader</Link></li>
-        <li><Link to="/gallery">Gallery</Link></li>
-        <li><Link to="/repeater">Text Repeater</Link></li>
-        <li><Link to="/fetches">Fetches</Link></li>
-        <li><Link to="/form">Form</Link></li>
-        <li><Link to="/login">Login</Link></li>
+    <nav>
+      <ul className='flex flex-col uppercase font-semibold h-[96.7vh] w-[200px] border-r-4 border-[#030637]'>
+        {navLinks.map((link) => (
+          <Link key={link.id} className='no-underline w-[100%]' to={link.to}>
+            <li className='m-1 w-[175px] darkpurple-bg p-1 rounded-lg text-xl hover:bg-black cursor-pointer'>{link.title}</li>
+          </Link>
+        ))}
       </ul>
-    </div>
-  )
-}
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
